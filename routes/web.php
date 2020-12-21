@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('user-pagination', function () {
+    return view('admin.users.default');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
