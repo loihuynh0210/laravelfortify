@@ -19,6 +19,11 @@ Route::get('user-pagination', function () {
     return view('admin.users.default');
 });
 
+Route::view('admin/post', 'admin.posts.default');
+Route::get('admin/post/create', \App\Http\Livewire\Posts\PostCreate::class);
+Route::get('admin/post/{slug}', \App\Http\Livewire\Posts\Post::class);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,6 +34,7 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('auth:admin')->group(function () {
         Route::get('dashboard', [AdminDashboardController::class, 'index']);
+
     });
 });
 
