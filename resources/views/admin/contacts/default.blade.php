@@ -1,9 +1,10 @@
 @extends('layouts.admins')
-
 @section('content')
-
-    <div class="grid grid-cols-1">
-        <livewire:contact-form />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            @livewire('contacts.contact-component')
+        </div>
     </div>
-
+</div>
 @endsection

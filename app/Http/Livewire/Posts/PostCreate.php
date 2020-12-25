@@ -8,9 +8,9 @@ use Illuminate\Support\Str;
 
 class PostCreate extends Component
 {
-	public $saveSuccess = false;
+    public $saveSuccess = false;
 
-	public $post;
+    public $post;
 
     protected $rules = [
         'post.title' => 'required|min:6',
@@ -31,7 +31,7 @@ class PostCreate extends Component
     public function render()
     {
         return view('livewire.posts.post-create')
-        		->extends('layouts.admins')
-            	->section('content');
+                ->extends('layouts.admins')
+                ->section('content');
     }
 }

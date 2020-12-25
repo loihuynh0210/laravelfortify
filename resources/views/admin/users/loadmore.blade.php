@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>How To Create Livewire Pagination Example Laravel 8 - phpcodingstuff.com</title>
-    @livewireStyles
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.0/tailwind.min.css" /> -->
-
+    <title>Livewire Load More OnScroll Tutorial Laravel 8</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
       <!-- Styles -->
-      <style>
+    <style>
          html, body {
          background-color: #fff;
          color: #636b6f;
@@ -55,19 +52,32 @@
 
 </head>
 <body>
-
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      How To Create Livewire Pagination Example Laravel 8 - phpcodingstuff.com
-    </div>
-    <div class="card-body">
-      @livewire('users.user-pagination')
-    </div>
-  </div>
-
-</body>
-
-@livewireScripts
+    <div class="container mt-5">
+         <div class="row justify-content-center">
+            <div class="col-md-8">
+               <div class="card">
+                  <div class="card-header">
+                     <h2>Livewire Load More OnScroll Tutorial Laravel 8 - phpcodingstuff.com</h2>
+                  </div>
+                  <div class="card-body">
+                     @if (session()->has('message'))
+                     <div class="alert alert-success">
+                        {{ session('message') }}
+                     </div>
+                     @endif
+                     @livewire('users.load-more-user-list')
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      @livewireScripts
+      <script type="text/javascript">
+         window.onscroll = function(ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+               window.livewire.emit('load-more');
+            }
+         };
+      </script>
 
 </html>

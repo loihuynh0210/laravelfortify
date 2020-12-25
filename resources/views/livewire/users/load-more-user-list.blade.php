@@ -1,5 +1,5 @@
-<div class="scrolling-pagination">
-    <table class="table-auto" style="width: 100%;">
+<div class="table-responsive">
+    <table class="table table-bordered" style="width: 100%;">
       <thead>
         <tr>
           <th class="px-4 py-2">ID</th>
@@ -8,7 +8,7 @@
         </tr>
       </thead>
       <tbody>
-        @foreach ($users as $user)
+        @foreach ($users_more as $user)
             <tr>
             <td class="border px-4 py-2">{{ $user->id }}</td>
             <td class="border px-4 py-2">{{ $user->name }}</td>
@@ -17,7 +17,4 @@
         @endforeach
       </tbody>
     </table>
-
-    {{ $users->links('vendor.livewire.bootstrap') }}
-
 </div>
