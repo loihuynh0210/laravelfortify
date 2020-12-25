@@ -5,22 +5,40 @@ namespace App\Http\Livewire\Contacts;
 use Livewire\Component;
 use App\Models\ContactLead;
 use Livewire\WithPagination;
+use Livewire\WithFileUploads;
 
 class ContactComponent extends Component
 {
-    use WithPagination;
+    use WithPagination, WithFileUploads;
 
-    public $name, $email, $phone, $message, $preferred, $selected_id;
+    public $name, $email, $photo, $phone, $message, $preferred, $selected_id;
     public $updateMode = false;
     public $searchName;
     public $searchEmail;
+
+    //protected $paginationTheme = 'bootstrap';
+
+    public $search;
+    public $searchEmails;
+
+    protected $queryString = [
+        'search',
+        'searchEmails',
+        'page' => ['except' => 1],
+    ];
 
     private $contact_lead;
     public $perPage = 2;
 
     protected $listeners = [
         'searchContact' => 'setSearchKeywork',
+        'postSearchQueryString' => 'getSearchQueryString'
     ];
+
+    public function mount()
+    {
+        //$this->fill(request()->only('search', 'page'));
+    }
 
     public function render()
     {
@@ -37,6 +55,19 @@ class ContactComponent extends Component
         ]);
     }
 
+    // call function form views
+    // Search Get
+    public function getSearchQueryString()
+    {
+        // push function with pagram
+        $this->searchName = $this->search;
+        $this->searchEmail = $this->searchEmails;
+
+        $this->resetPage();
+    }
+
+    // call function form views
+    // Search Post
     public function setSearchKeywork($searchName, $searchEmail)
     {
         $this->searchName = $searchName;
@@ -56,6 +87,7 @@ class ContactComponent extends Component
 
     protected $rules = [
         'name' => 'required|min:5',
+        'photo' => 'image|max:1024',
         'email' => 'required|email|min:4',
         'phone' => 'required|min:4',
         'message' => 'nullable',
@@ -79,6 +111,8 @@ class ContactComponent extends Component
         $validatedData['preferred'] = 1;
 
         ContactLead::create($validatedData);
+
+        //$this->photo->store('photos', 's3');
 
         // ContactLead::create([
         //     'name' => $this->name,
