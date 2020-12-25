@@ -26,6 +26,7 @@ Route::view('admin/post', 'admin.posts.default');
 Route::get('admin/post/create', \App\Http\Livewire\Posts\PostCreate::class);
 Route::get('admin/post/{slug}', \App\Http\Livewire\Posts\Post::class);
 Route::get('admin/contact', \App\Http\Livewire\Contact\ContactForm::class);
+
 Route::view('admin/contacts','admin.contacts.default');
 
 

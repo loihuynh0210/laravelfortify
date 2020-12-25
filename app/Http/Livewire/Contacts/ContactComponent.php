@@ -19,11 +19,15 @@ class ContactComponent extends Component
     public $perPage = 2;
 
     protected $listeners = [
-        'searchContact' => 'setSearchTerm',
+        'searchContact' => 'setSearchKeywork',
     ];
 
     public function render()
     {
+        //$this->addError('email', 'The email field is invalid.');
+        // $errors = $this->getErrorBag();
+        // $errors->add('email', 'Some message');
+
         $this->contact_lead = ContactLead::where('name', 'like', '%' . $this->searchName . '%')
                                 ->where('email', 'like', '%' . $this->searchEmail . '%')
                                 ->paginate($this->perPage);
@@ -33,7 +37,7 @@ class ContactComponent extends Component
         ]);
     }
 
-    public function setSearchTerm($searchName, $searchEmail)
+    public function setSearchKeywork($searchName, $searchEmail)
     {
         $this->searchName = $searchName;
         $this->searchEmail = $searchEmail;
@@ -50,23 +54,39 @@ class ContactComponent extends Component
         $this->preferred = 0;
     }
 
+    protected $rules = [
+        'name' => 'required|min:5',
+        'email' => 'required|email|min:4',
+        'phone' => 'required|min:4',
+        'message' => 'nullable',
+        'preferred' => 'nullable|min:0|max:1'
+    ];
+
+    protected $messages = [
+        'email.required' => 'The Email 11 Address cannot be empty.',
+        'email.email' => 'The Email 22 Address format is not valid.',
+    ];
+
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function store()
     {
-        $this->validate([
-            'name' => 'required|min:5',
-            'email' => 'required|email|min:4',
-            'phone' => 'required|min:4',
-            'message' => 'nullable',
-            'preferred' => 'nullable|min:0|max:1'
-        ]);
+        $validatedData = $this->validate();
+        $validatedData['preferred'] = 1;
 
-        ContactLead::create([
-            'name' => $this->name,
-            'email' => $this->email,
-            'phone' => $this->phone,
-            'message' => $this->message,
-            'preferred' => 1,
-        ]);
+        ContactLead::create($validatedData);
+
+        // ContactLead::create([
+        //     'name' => $this->name,
+        //     'email' => $this->email,
+        //     'phone' => $this->phone,
+        //     'message' => $this->message,
+        //     'preferred' => 1,
+        // ]);
 
         $this->resetInput();
     }
