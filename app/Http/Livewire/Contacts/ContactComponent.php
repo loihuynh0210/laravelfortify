@@ -87,7 +87,7 @@ class ContactComponent extends Component
 
     protected $rules = [
         'name' => 'required|min:5',
-        'photo' => 'image|max:1024',
+        //'photo' => 'image|max:1024',
         'email' => 'required|email|min:4',
         'phone' => 'required|min:4',
         'message' => 'nullable',
