@@ -5,8 +5,8 @@
         <input wire:model="name" type="text" class="form-control">
         @error('name') <span class="alert-danger">{{ $message }}</span> @enderror
     </div>
-
-    <div class="form-group">
+    <!--Uplaod to S3---->
+    <!-- <div class="form-group">
         <label for="pwd">Photo:</label>
         @if ($photo)
             Photo Preview:
@@ -15,6 +15,16 @@
         <input type="file" wire:model="photo" class="form-control">
         <div wire:loading wire:target="photo">Uploading...</div>
         @error('photo') <span class="error">{{ $message }}</span> @enderror
+    </div> -->
+
+    <div class="form-group">
+        <label for="exampleInputName">File:</label>
+        @if ($photo)
+            Photo Preview:
+            <img src="{{ $photo->temporaryUrl() }}">
+        @endif
+        <input type="file" class="form-control" id="exampleInputName" wire:model="photo">
+        @error('photo') <span class="text-danger">{{ $message }}</span> @enderror
     </div>
 
     <div class="form-group">

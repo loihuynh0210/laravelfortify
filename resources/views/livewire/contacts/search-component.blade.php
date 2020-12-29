@@ -6,7 +6,7 @@
             <input wire:model.defer="searchEmail" type="text" class="form-control">
             {{-- <button wire:click="searchContact()" class="btn btn-primary">Submit</button> --}}
             <button wire:click="$emit('postSearch')" class="btn btn-primary">Submit</button>
-            <button wire:click="$emit('postItems', {{$contact->id}})" class="btn btn-primary">Items</button>
+            <button wire:click="$emit('postItems', {{$contact->id??''}})" class="btn btn-primary">Items</button>
         </div>
     </div>
 </div>

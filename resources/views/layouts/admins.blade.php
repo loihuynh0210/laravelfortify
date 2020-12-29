@@ -13,6 +13,16 @@
 <body>
     <x-header></x-header>
 
+    <x-panel title="Update Your Info!" class="max-w-2xl">
+        <h1>I AM IN THE SLOT</h1>
+    </x-panel>
+
+    <x-card src="https://static.yeah1.com/uploads/59/2020/12/29/5feab4f3149d8.jpg">
+        Blade Rocks
+        <x-slot name="description">Slots for the win</x-slot>
+    </x-card>
+
+
     @yield('content')
 
     @livewireScripts

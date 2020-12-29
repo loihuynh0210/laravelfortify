@@ -112,10 +112,12 @@ class ContactComponent extends Component
     {
         $validatedData = $this->validate();
         $validatedData['preferred'] = 1;
+        $validatedData['photo'] = $this->photo->store('files', 'public');
 
         ContactLead::create($validatedData);
 
-        $this->photo->store('photos', 's3');
+        // upload to S3
+        //$this->photo->store('photos', 's3');
 
         // ContactLead::create([
         //     'name' => $this->name,
