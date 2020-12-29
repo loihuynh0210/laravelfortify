@@ -6,6 +6,8 @@ use Livewire\Component;
 use App\Models\ContactLead;
 use Livewire\WithPagination;
 use Livewire\WithFileUploads;
+use Illuminate\Http\Request;
+use Storage;
 
 class ContactComponent extends Component
 {
@@ -81,13 +83,14 @@ class ContactComponent extends Component
         $this->name = null;
         $this->email = null;
         $this->phone = null;
+        $this->photo = null;
         $this->message = null;
         $this->preferred = 0;
     }
 
     protected $rules = [
         'name' => 'required|min:5',
-        'photo' => 'image|max:1024',
+        'photo' => 'nullable|image|max:1024',
         'email' => 'required|email|min:4',
         'phone' => 'required|min:4',
         'message' => 'nullable',
@@ -112,7 +115,7 @@ class ContactComponent extends Component
 
         ContactLead::create($validatedData);
 
-        //$this->photo->store('photos', 's3');
+        $this->photo->store('photos', 's3');
 
         // ContactLead::create([
         //     'name' => $this->name,

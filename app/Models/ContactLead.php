@@ -9,6 +9,17 @@ class ContactLead extends Model
 {
     use HasFactory;
 
+    // protected $table = 'contact_leads';
+
+    // protected $fillable = [
+    //     'name',
+    //     'photo',
+    //     'email',
+    //     'phone',
+    //     'preferred',
+    //     'message'
+    // ];
+
     /** @var array $guarded */
     protected $guarded = [];
 
