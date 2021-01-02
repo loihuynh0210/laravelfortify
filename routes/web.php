@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('admin/user', function () {
     return view('admin.users.default');
 });
+Route::get('admin/user-click-more', function () {
+    return view('admin.users.clickmore');
+});
 Route::get('admin/user-load-more', function () {
     return view('admin.users.loadmore');
 });
@@ -45,6 +48,6 @@ Route::prefix('admin')->group(function () {
     });
 });
 
-Route::middleware(['auth:web', 'verified'])->get('/dashboard', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

@@ -21,7 +21,15 @@
         <label for="exampleInputName">File:</label>
         @if ($photo)
             Photo Preview:
-            <img src="{{ $photo->temporaryUrl() }}">
+            @php
+                try {
+                    $url = $photo->temporaryUrl();
+                    $photoStatus = true;
+                }catch (RuntimeException $e){
+                    $this->photoStatus = false;
+                }
+            @endphp
+            @if($photoStatus) <img src="{{ $url }}" class="w-auto h-64"> @endif
         @endif
         <input type="file" class="form-control" id="exampleInputName" wire:model="photo">
         @error('photo') <span class="text-danger">{{ $message }}</span> @enderror

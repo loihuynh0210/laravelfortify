@@ -13,7 +13,7 @@ class UserPagination extends Component
     public function render()
     {
         return view('livewire.users.user-pagination', [
-            'users' => User::paginate(10),
+            'users' => User::paginate(3),
         ]);
     }
 }
