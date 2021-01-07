@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=1000" name="viewport">
+                <meta content="noindex,nofollow" name="robots">
+                    <title>
+                        ログイン | {[#SITE_TITLE#]}
+                    </title>
+                    <link href="/css/common.css" media="all" rel="stylesheet">
+                        <link href="/css/admin.css" media="all" rel="stylesheet">
+                            <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+                                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+                                </script>
+                                <script src="/js/admin.js">
+                                </script>
+                                <!--[if lt IE 9]>
+<script src="/js/html5shiv-printshiv.js"></script>
+<![endif]-->
+                            </link>
+                        </link>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body id="pageAdminLogin">
+        <div class="radius5" id="loginWrapper">
+            <h1 class="mb20">
+                <a href="/admin/" id="logo">
+                    <img alt="CB-STANDARD" src="/img/cybridge/logo.gif"/>
+                </a>
+            </h1>
+            <form action="" class="mb20" id="loginForm" method="post" name="loginForm">
+                <p class="alert">
+                    パスワードが間違っています！
+                </p>
+                <p class="mb5">
+                    <label>
+                        <input class="loginInput" name="" placeholder="ユーザー名" type="text" value=""/>
+                    </label>
+                </p>
+                <p class="mb5">
+                    <label>
+                        <input class="loginInput" name="" placeholder="パスワード" type="password" value=""/>
+                    </label>
+                </p>
+                <p class="mb10">
+                    <span class="checkbox">
+                        <input id="rememberme" type="checkbox">
+                            <label for="rememberme">
+                                ログイン状態を保存する
+                            </label>
+                        </input>
+                    </span>
+                </p>
+                <p class="submit">
+                    <button class="button login auto mb0" id="loginBtn" type="submit">
+                        ログインする
+                    </button>
+                </p>
+            </form>
+            <div class="boxText">
+                <p class="textLink" id="nav">
+                    <a href="/admin/">
+                        管理画面トップはこちらから
+                    </a>
+                </p>
+                <p class="text">
+                    ※ログインボタンをクリックすると、エラー時のシェイクアニメーションが作動するようになっています。お好みで調整して利用してください。
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

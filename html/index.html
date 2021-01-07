@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:mixi="http://mixi-platform.com/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="{[#SITE_DESCRIPTION#]}">
+<meta name="keywords" content="{[#SITE_KEYWORDS#]}">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="ページタイトル | {[#SITE_TITLE#]}">
+<meta property="og:type" content="website">
+<meta property="og:description" content="{[#SITE_DESCRIPTION#]}">
+<meta property="og:url" content="{[#SITE_URL#]}">
+<meta property="og:image" content="/img/social.png">
+<meta property="og:site_name" content="{[#SITE_TITLE#]}">
+<meta property="fb:admins" content="1234567890">
+<meta property="fb:app_id" content="1234567890">
+<title>{[#SITE_TITLE#]}</title>
+<link rel="stylesheet" href="/css/common.css" media="all">
+<link rel="stylesheet" href="/css/style.css" media="all">
+<link rel="stylesheet" href="/css/module.css" media="all">
+<link rel="stylesheet" href="/css/colorbox.css" media="all">
+<link rel="index contents" href="/" title="ホーム">
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+<link rel="mixi-check-image" href="/img/social.png">
+<script src="/js/swfobject.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/jquery.lazyload.min.js"></script>
+<script src="/js/jquery.colorbox.js"></script>
+<script src="/js/jquery.tinyTips.js"></script>
+<script src="/js/jquery.cycle2.js"></script>
+<script src="/js/jquery.flexslider.js"></script>
+<script src="/js/script.js"></script>
+<!--[if lt IE 9]>
+<script src="/js/html5shiv-printshiv.js"></script>
+<![endif]-->
+<meta name="google-translate-customization" content="2f43a3a8e6bde2c1-7f93cdcc6007e365-gdc75047682808d1e-25"></meta></head>
+<body id="pageHome">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div id="wrapper">
+	<div id="container">
+		<noscript>
+			<p id="noScript">JavaScriptが無効です。正しくサイトを表示するためには、JavaScriptを有効にする必要があります。</p>
+		</noscript>
+		
+		<header id="header">
+			<div id="headerInner">
+				<h1>このサイトについて（※キーワードを意識してユニークな文言を入れてください）</h1>
+				<a href="/" id="logo"><img src="/img/cybridge/logo.gif" alt="{[#SITE_TITLE#]}"></a>
+				<nav>
+					<ol id="navi">
+						<li id="naviBusiness"><a href="#" class="hover">事業案内</a></li>
+						<li id="naviCase"><a href="#" class="hover">事例紹介</a></li>
+						<li id="naviCorporation"><a href="#" class="hover">企業情報</a></li>
+						<li id="naviRecruit"><a href="#" class="hover">採用情報</a></li>
+						<li id="naviContact"><a href="#" class="hover">お問い合わせ</a></li>
+					</ol>
+				</nav>
+			</div>
+		</header>
+		<!-- /#header -->
+		
+		
+		<ol class="breadcrumbs">
+			<li><a href="/">ホーム</a></li>
+			<li><a href="#">コンテンツ</a></li>
+			<li><em>ページ名</em></li>
+		</ol>
+		<!-- / .breadcrumbs -->
+		
+		<div id="keyv">
+			<div id="flashContent"><img src="/img/cybridge/keyv.png" alt="株式会社サイブリッジ"></div>
+		</div>
+		<!-- / #keyv -->
+		
+		
+		<div id="contents" class="clearfix">
+			<div id="main">
+				<section class="section">
+					<h1 class="headline">CB-STANDARD for HTML5 v1.2.2</h1>
+					<p class="center"><strong class="red">必ずCB-STANDARDガイドラインを参照してください。</strong></p>
+					
+					<dl class="dlLine mb10">
+						<dt><span>最終更新日：</span></dt>
+						<dd>
+							<div>2013年2月21日</div>
+						</dd>
+					</dl>
+					<!-- / .dlLine mb10 -->
+					
+					<p>CB-STANDARDのHTML5版です。新規案件でIE6への対応が必要ない場合、PCのコーディングではHTML5版の使用も検討してください。<!--
+					--><strong class="red">HTML5版はIE6非対応、IE7から対応とします。</strong></p>
+					
+					<section class="item">
+						<h1 class="headline2"><span>XHTML版とHTML5版の違い</span></h1>
+						<p>HTML5版では、新たに登場したHTML要素によるコーディングの他、CSS3を使用したアイコンフォントやアニメーションスタイルを標準で用意しています。<!--
+						-->また、JSについてはIE6用の透過PNG対策を外し、代わりにモダンブラウザで動作するスクリプトを追加しています。</p>
+					</section>
+					<!-- / .item -->
+					
+					<section class="item">
+						<h1 class="headline2"><span>HTML5アウトライン</span></h1>
+						<p>sectionはセクショニングのためのタグ、divは意味を為さないグループ化のためのタグです。<br>
+							<em class="bold">直下に見出しが付く場合は<strong class="red">section</strong></em>、そうでない場合はdivを使用してください。
+						<p>
+						<p>見出しはできるだけsectionで囲みh1でマークアップすることが望ましいため、そちらに準拠していますが、<!--
+						-->今後Googleがスパム判定する可能性が全く無いとは限らないため、従来の通り(h1～h6）記載するか否かは案件により判断してください。</p>
+						<p><a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo" target="_blank"><!--
+						-->Chromeのエクステンション・HTML5 Outliner</a>を使用すれば、HTML5のアウトライン構造を視覚的に確認することができます。</p>
+					</section>
+					<!-- / .item -->
+				</section>
+				<!-- / .section -->
+				
+				<section class="section">
+					<h1 class="headline"><a href="/css/common.css" target="_blank">common.css</a></h1>
+					<p>common.cssはXHTML版とほぼ同じですが、HTML5タグ用のリセットCSSやCSS3を使用したスタイルが一部追加されています。</p>
+					
+					<section class="item">
+						<h1 class="headline2"><span>.dlLineの使い方に注意</span></h1>
+						<p>dl要素による定義リストについて、HTML5では少しルールが変わっています。</p>
+						
+						<dl class="dlLine">
+							<dt><span>12月20日</span></dt>
+							<dd>
+								<div>dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd</div>
+							</dd>
+							<dt><span>12月10日</span></dt>
+							<dd>
+								<div>dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd dd</div>
+							</dd>
+							<dt><span>12月04日</span></dt>
+							<dd>
+								<div>XHTMLは良いですが、HTML5の場合、「1つのdl要素の中で、同じ内容を持つdt要素が複数存在すべきではない」とのことです。<!--
+								--><a href="http://terkel.jp/archives/2010/04/the-dl-element-in-html5/" target="_blank">正式な代替案はありません</a>が、<!--
+								-->tableでコーディングするなど適宜対応すること。</div>
+							</dd>
+						</dl>
+					</section>
+					<!-- / .item -->
+					
+					<section class="item">
+						<h1 class="headline2"><span>CSS3 common styles</span></h1>
+						<p>CSS3による簡易的なスタイルです。text-shadowに関してはIE8以上で動作を確認。</p>
+						
+						<ul class="box mb20">
+							<li>.boxShadow | ボックスシャドウを適用</li>
+							<li>.textShadowW | テキストシャドウ（白）</li>
+							<li>.textShadowB | テキストシャドウ（黒）</li>
+							<li>.radius5 | 角丸5px</li>
+							<li>.radius10 | 角丸10px</li>
+						</ul>
+						
+						<div class="textShadowW radius5 mb10 pa10" style="background-color:#CCC;">.textShadow1 .radius5</div>
+						<div class="boxShadow radius10 mb10 pa10" style="border:1px solid #CCC; background-color:#EEE;">.boxShadow1 .radius10</div>
+					</section>
+					<!-- / .item -->
+				</section>
+				<!-- / .section -->
+				
+				<section class="section">
+					<h1 class="headline"><a href="/css/style.css" target="_blank">style.css</a></h1>
+					<p>style.cssも基本はXHTML版とほぼ同様です。グラデーション表現などにCSS3を用いているので、見比べてみてください。</p>
+					<section class="item">
+						<h1 class="headline2"><span>button styles</span></h1>
+						<p><a href="http://css3pie.com/" target="_blank">PIE.htc</a>を使用することで、IEでもCSS3の角丸やグラデーションなどが実装できます。<!--
+						-->ただし、PIE.htcは動作が不安定な面があり、乱用は禁物です。</p>
+						
+						<form class="clearfix" method="post" action="/">
+							<button type="button" class="button black mb0" style="float:left; margin-right:15px;">.button .black</button>
+							<button type="button" class="button blue mb0" style="float:left; margin-right:15px;">.button .blue</button>
+							<button type="button" class="button yellow mb0" style="float:left; margin-right:15px;">.button .yellow</button>
+							<button type="button" class="button gray mb0" style="float:left;">.button .gray</button>
+						</form>
+					</section>
+					<!-- / .item -->
+				</section>
+				<!-- / .section -->
+				
+				
+				<section class="section">
+					<h1 class="headline"><a href="/css/module.css" target="_blank">module.css</a> &amp; <a href="/js/script.js" target="_blank">script.js</a></h1>
+					<p>module.css、script.js共にXHTML版よりも機能が追加されています。</p>
+					<section class="item">
+						<h1 class="headline2"><span>CSS3 animate.css</span></h1>
+						<p>CSS3のアニメーション機能を使って、ボタンや画像のホバー時にユニークな動きを加えることができます。<!--
+						--><strong class="red">IEには対応していません</strong>が、<a href="http://www.atmarkit.co.jp/fwcr/design/tool/ichigeki15/01.html" target="_blank"><!--
+						-->プログレッシブエンハンスメント</a>の概念に基づき、UXデザインの+αとして利用してみてください。</p>
+						<form class="clearfix mb20" method="post" action="/">
+							<button type="button" class="button gray animated flash" style="float:left; margin-right:15px;">.animated .flash</button>
+							<button type="button" class="button gray animated hinge flash" style="float:left; margin-right:15px;">.animated .hinge .flash</button>
+							<button type="button" class="button gray animated shake" style="float:left; margin-right:15px;">.animated .shake</button>
+							<button type="button" class="button gray animated bounce" style="float:left;">.animated .bounce</button>
+							<button type="button" class="button gray animated tada" style="float:left; margin-right:15px;">.animated .tada</button>
+							<button type="button" class="button gray animated swing" style="float:left; margin-right:15px;">.animated .swing</button>
+							<button type="button" class="button gray animated wobble" style="float:left; margin-right:15px;">.animated .wobble</button>
+							<button type="button" class="button gray animated wiggle" style="float:left;">.animated .wiggle</button>
+							<button type="button" class="button gray animated pulse" style="float:left; margin:0 15px 0 0;">.animated .pulse</button>
+						</form>
+						
+						<figure>
+							<figcaption class="mb20">▼画像にマウスを乗せると動作します。</figcaption>
+							<img src="/img/dammy/animate_test.png" alt="" class="animated bounce">
+						</figure>
+					</section>
+					<!-- / .item -->
+					
+					<section class="item">
+						<h1 class="headline2"><span>IconFont styles</span></h1>
+						<p><strong class="red">Webフォント「Font Awesome」をmodule.cssに組み込んでいます。</strong><!--
+						-->iタグにclass名を設定するだけで、200種類以上のアイコンを扱うことができます。<!--
+						-->（接頭辞はicon-）クラス名について詳しくは<a href="http://fortawesome.github.com/Font-Awesome/" target="_blank"><!--
+						-->Font Awesomeの公式サイト</a>を参照してください。</p>
+						
+						<p>余談ですが、Font Awesomeは、主にエンジニア向けのCSSフレームワーク「<a href="http://twitter.github.com/bootstrap/" target="_blank"><!--
+						-->Twitter Bootstrap</a>」の追加アイコンパックです。もちろん画像としても使用可能なので、デザインの際はAIデータを参照してください。</p>
+						<p>Y:\デザイン素材\[素材]フォント\アイコンフォント\アイコンフォント集（FontAwesome-Vectors）.ai</p>
+						
+						<ul class="float4 clearfix mb20">
+							<li><i class="icon-caret-right f16"></i>icon-caret-right</li>
+							<li><i class="icon-chevron-up f16"></i>icon-chevron-up</li>
+							<li><i class="icon-copy f16"></i>icon-copy</li>
+							<li><i class="icon-envelope f16"></i>icon-envelope</li>
+							<li><i class="icon-edit f16"></i>icon-edit</li>
+							<li><i class="icon-list-ul f16"></i>icon-list-ul</li>
+							<li><i class="icon-cloud f16"></i>icon-cloud</li>
+							<li><i class="icon-reorder f16"></i>icon-reorder</li>
+							<li><i class="icon-rss f16"></i>icon-rss</li>
+							<li><i class="icon-twitter f16"></i>icon-twitter</li>
+							<li><i class="icon-facebook f16"></i>icon-facebook</li>
+							<li><i class="icon-google-plus f16"></i>icon-google-plus</li>
+						</ul>
+						
+						<p>「Font Awesome」のフォントだけでは足りないという場合は、「<a href="http://fontello.com/" target="_blank">Fontelico</a>」という<!--
+						-->サービスを利用しましょう。一覧から自分の好きなWebフォントを選択してダウンロードすることができます。</p>
+					</section>
+					<!-- / .item -->
+					
+					<section class="item">
+						<h1 class="headline2"><span>script.js（XHTML版共通）</span></h1>
+						<p>JavaScriptでよく使用するコードは、jQueryを中心にscript.jsにまとめています。script.js内の不要なコードは削除して使用してください。<!--
+						-->自分で導入したjQueryプラグイン用のオプションは、原則script.js内に記述してください。</p>
+						<section class="inner">
+							<h1 class="headline3"><span>.pageTop（ページのトップへ戻る）</span></h1>
+							<p class="right pageTop"><a href="#wrapper">ページのトップへ</a></p>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>IE用 aタグの点線を消去</span></h1>
+							<p>旧IE用の処置として、foucs時に現れる点線をjQueryで消去しています。</p>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner mb0 pb20">
+							<h1 class="headline3"><span>.fade（フェードイン・フェードアウト）</span></h1>
+							<dl class="relative">
+								<dt class="fade"><span>クリックすると、次に出現する要素が「fadeInまたはfadeOut」となります。</span></dt>
+								<dd class="fadeBox">クリックすると<strong class="red">.accordionと同じ要素に.activeが付与されます。</strong><!--
+								-->.activeを利用して、開閉時のデザインを変更してください。絶対配置で要素の上に重ねて表示しています。<!--
+								-->絶対配置で要素の上に重ねて表示しています。絶対配置で要素の上に重ねて表示しています。絶対配置で要素の上に重ねて表示しています。<!--
+								-->絶対配置で要素の上に重ねて表示しています。絶対配置で要素の上に重ねて表示しています。</dd>
+							</dl>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner mb0 pb20">
+							<h1 class="headline3"><span>.slideToggle（スライド式トグル）</span></h1>
+							<dl>
+								<dt class="slideToggle"><span>クリックすると、次に出現する要素が「表示または非表示」となります。</span></dt>
+								<dd class="toggleBox">クリックすると<strong class="red">.slideToggleと同じ要素に.activeが付与されます。</strong><!--
+								-->.activeを利用して、開閉時のデザインを変更してください。</dd>
+							</dl>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner mb0 pb20">
+							<h1 class="headline3"><span>.accordion（アコーディオンパネル）</span></h1>
+							<p>スライド式トグルは複数開閉できる、アコーディオンパネルはどれか一つのみ開閉するという違いがあります。</p>
+							<dl class="accordionWrapper">
+								<dt class="accordion"><span>アコーディオン1</span></dt>
+								<dd class="accordionBox">アコーディオン1<br>
+									アコーディオン1<br>
+									アコーディオン1<br>
+									アコーディオン1<br>
+								</dd>
+								
+								<dt class="accordion"><span>アコーディオン2</span></dt>
+								<dd class="accordionBox">アコーディオン2<br>
+									アコーディオン2<br>
+									アコーディオン2<br>
+									アコーディオン2<br>
+								</dd>
+								
+								<dt class="accordion"><span>アコーディオン3</span></dt>
+								<dd class="accordionBox">アコーディオン3<br>
+									アコーディオン3<br>
+									アコーディオン3<br>
+									アコーディオン3<br>
+								</dd>
+							</dl>
+							<!-- / .accordionWrapper -->
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner mb0 pb20">
+							<h1 class="headline3"><span>.tab（タブメニュー）</span></h1>
+							
+							<ul class="tab">
+								<li class="active"><a href="#tab1">タブメニュー1</a></li>
+								<li><a href="#tab2">タブメニュー2</a></li>
+								<li><a href="#tab3">タブメニュー3</a></li>
+								<li><a href="#tab4">タブメニュー4</a></li>
+							</ul>
+							
+							<div class="tabContents">
+								<div id="tab1" class="tabBox" style="display:block;">タブメニュー1タブメニュー1タブメニュー1タブメニュー1タブメニュー1</div>
+								<div id="tab2" class="tabBox">タブメニュー2タブメニュー2タブメニュー2タブメニュー2タブメニュー2</div>
+								<div id="tab3" class="tabBox">タブメニュー3タブメニュー3タブメニュー3タブメニュー3タブメニュー3</div>
+								<div id="tab4" class="tabBox">タブメニュー4タブメニュー4タブメニュー4タブメニュー4タブメニュー4</div>
+							</div>
+							
+							<ul class="tab">
+								<li><a href="#tab5"><span>タブメニュー5</span></a></li>
+								<li><a href="#tab6"><span>タブメニュー6</span></a></li>
+								<li class="active"><a href="#tab7"><span>タブメニュー7</span></a></li>
+								<li><a href="#tab8"><span>タブメニュー8</span></a></li>
+							</ul>
+							
+							<div class="tabContents">
+								<div id="tab5" class="tabBox pb0">タブメニュー5タブメニュー5タブメニュー5タブメニュー5タブメニュー5</div>
+								<div id="tab6" class="tabBox pb0">タブメニュー6タブメニュー6タブメニュー6タブメニュー6タブメニュー6</div>
+								<div id="tab7" class="tabBox pb0" style="display:block;">タブメニュー7タブメニュー7タブメニュー7タブメニュー7タブメニュー7</div>
+								<div id="tab8" class="tabBox pb0">タブメニュー8タブメニュー8タブメニュー8タブメニュー8タブメニュー8</div>
+							</div>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>cookie.js（フォントサイズ変更）</span></h1>
+							<p><strong class="red">※jquery.cookie.jsを別途読み込む必要があります。</strong></p>
+							
+							<ul id="fontChange" class="inlineList" style="color:#06C; cursor:pointer; text-decoration:underline;">
+								<li id="f11">小</li>
+								<li>中</li>
+								<li id="f17">大</li>
+							</ul>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>colorbox.js（多機能lightBox）</span></h1>
+							<p><strong class="red">※jquery.colorbox.jsを別途読み込む必要があります。</strong><br>
+								単なるlightBoxとしてだけでなく、フォームなどをポップアップで表示させるモーダルウィンドウとしても活用できます。</p>
+								
+							<ul class="mb20">
+								<li><a class="colorboxGroup" href="/img/dammy/colorbox1.jpg" title="colorboxのサンプル1">colorboxのサンプル1</a></li>
+								<li><a class="colorboxGroup" href="/img/dammy/colorbox2.jpg" title="colorboxのサンプル2">colorboxのサンプル2</a></li>
+								<li><a class="colorboxGroup" href="/img/dammy/colorbox3.jpg" title="colorboxのサンプル3">colorboxのサンプル3</a></li>
+							</ul>
+							<ul>
+								<li><a class='colorboxAjax' href="/content/ajax.html" title="AjaxによるHTMLの読み込み">AjaxでHTMLファイルを読み込めます</a></li>
+								<li><a class='colorboxYoutube' href="//www.youtube.com/embed/617ANIA5Rqs?rel=0&amp;wmode=transparent" title="YouTobe動画の読み込み"><!--
+								-->YouTobeの動画を読み込めます</a></li>
+								<li><a class='colorboxIframe' href="//www.cybridge.jp/">外部サイトをiframeで読み込めます</a></li>
+								<li><a class='colorboxInline' href="#inlineContent">インラインの要素を読み込めます</a></li>
+							</ul>
+							
+							<div class="noDisplay">
+								<div id="inlineContent" class="ma10">インラインHTMLです。インラインHTMLです。インラインHTMLです。インラインHTMLです。インラインHTMLです。<!--
+								-->インラインHTMLです。インラインHTMLです。インラインHTMLです。インラインHTMLです。インラインHTMLです。インラインHTMLです。インラインHTMLです。</div>
+							</div>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>tinyTips.js（ツールチップ）</span></h1>
+							<p><strong class="red">※jquery.tinyTips.jsを別途読み込む必要があります。</strong><br>
+								a.tTipでタイトル属性をツールチップとして表示します。</p>
+							<ul>
+								<li><a class="tTip" href="#" title="title属性の文字列を表示しています。">マウスホバーでツールチップが表示されます。</a></li>
+							</ul>
+						</section>
+						<!-- / .inner -->
+					</section>
+					<!-- / .item -->
+					
+					<section class="item">
+						<h1 class="headline2"><span>script.js（HTML5追加版）</span></h1>
+						<p>以下はHTML5版から追加されている、より高機能で便利なプラグイン集です。</p>
+						
+						<section class="inner">
+							<h1 class="headline3"><span>lazyload.js（画像の遅延読み込み）</span></h1>
+							<p><strong class="red">※jquery.lazyload.jsを別途読み込む必要があります。</strong><br>
+								画像をスクロールに沿ってフェードインで表示させます。対象のimg要素に.lazyを付与してください。src属性の代わりに「data-original」属性に画像パスを指定します。</p>
+							<div class="center"><img src="/img/module/loading.gif" class="lazy" data-original="http://cambelt.co/640x250" alt=""></div>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>cycle2.js（コンテンツスライダー）</span></h1>
+							<p><strong class="red">※jquery.cycle2.jsを別途読み込む必要があります。</strong><br>
+								<em class="bold">jQuery.cycle.jsの後継版です。</em>HTML5の独自データ属性を使用して、通常のスライダーとしてだけでなく<!--
+								-->レスポンシブ対応やTwitterのタイムライン表示など多彩な表現が可能です。<br>
+								詳細は<a href="http://jquery.malsup.com/cycle2/" target="_blank">公式サイト</a>にて。</p>
+								
+							<div id="cycle-wrapper">
+								<div class="cycle-slideshow"
+									data-cycle-prev="#cycle-prev"
+									data-cycle-next="#cycle-next">
+									<img src="/img/dammy/img01.png" alt="">
+									<img src="/img/dammy/img02.png" alt="">
+									<img src="/img/dammy/img03.png" alt="">
+									<img src="/img/dammy/img04.png" alt="">
+								</div>
+								<div class="cycle-direction">
+									<span id="cycle-prev"></span><span id="cycle-next"></span>
+								</div>
+							</div>
+							<!-- / #cycle-wrapper -->
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>flexslider.js（コンテンツスライダー）</span></h1>
+							<p><strong class="red">※jquery.flexslider.jsを別途読み込む必要があります。</strong><br>
+								こちらもレスポンシブ対応の軽量で使いやすいスライダープラグインです。カルーセルパネルとして1ページに複数設置も可能。<br>
+								詳細は<a href="http://flexslider.woothemes.com/" target="_blank">公式サイト</a>にて。</p>
+								
+							<div class="flexSlider">
+								<ul class="slides">
+									<li><img src="http://cambelt.co/765x250" alt=""></li>
+									<li><img src="http://cambelt.co/765x250" alt=""></li>
+								</ul>
+							</div>
+							<!-- / .flexSlider -->
+							
+							<p>以下はコンテンツをカルーセルパネル化した場合のサンプルです。</p>
+							<div class="flexCarousel">
+								<ul class="slides">
+									<li class="carouselBox">
+										<article><a href="#"><img class="thumb" src="http://cambelt.co/200x200" alt=""></a>
+											<h1 class="articleTitle"><a href="#">1.記事のタイトルが入ります記事のタイトルが入ります...</a></h1>
+											<p class="articleText">本文が入ります本文が入ります本文が入ります本文が入ります本文が入ります...<a href="#">[続きを読む]</a></p>
+										</article>
+									</li>
+									<li class="carouselBox">
+										<article><a href="#"><img class="thumb" src="http://cambelt.co/200x200" alt=""></a>
+											<h1 class="articleTitle"><a href="#">2.記事のタイトルが入ります記事のタイトルが入ります...</a></h1>
+											<p class="articleText">本文が入ります本文が入ります本文が入ります本文が入ります本文が入ります...<a href="#">[続きを読む]</a></p>
+										</article>
+									</li>
+									<li class="carouselBox">
+										<article><a href="#"><img class="thumb" src="http://cambelt.co/200x200" alt=""></a>
+											<h1 class="articleTitle"><a href="#">3.記事のタイトルが入ります記事のタイトルが入ります...</a></h1>
+											<p class="articleText">本文が入ります本文が入ります本文が入ります本文が入ります本文が入ります...<a href="#">[続きを読む]</a></p>
+										</article>
+									</li>
+									<li class="carouselBox">
+										<article><a href="#"><img class="thumb" src="http://cambelt.co/200x200" alt=""></a>
+											<h1 class="articleTitle"><a href="#">4.記事のタイトルが入ります記事のタイトルが入ります...</a></h1>
+											<p class="articleText">本文が入ります本文が入ります本文が入ります本文が入ります本文が入ります...<a href="#">[続きを読む]</a></p>
+										</article>
+									</li>
+									<li class="carouselBox">
+										<article><a href="#"><img class="thumb" src="http://cambelt.co/200x200" alt=""></a>
+											<h1 class="articleTitle"><a href="#">5.記事のタイトルが入ります記事のタイトルが入ります...</a></h1>
+											<p class="articleText">本文が入ります本文が入ります本文が入ります本文が入ります本文が入ります...<a href="#">[続きを読む]</a></p>
+										</article>
+									</li>
+									<li class="carouselBox">
+										<article><a href="#"><img class="thumb" src="http://cambelt.co/200x200" alt=""></a>
+											<h1 class="articleTitle"><a href="#">6.記事のタイトルが入ります記事のタイトルが入ります...</a></h1>
+											<p class="articleText">本文が入ります本文が入ります本文が入ります本文が入ります本文が入ります...<a href="#">[続きを読む]</a></p>
+										</article>
+									</li>
+								</ul>
+								<!-- / .slides -->
+							</div>
+							<!-- / .flexCarousel -->
+						</section>
+						<!-- / .inner -->
+					</section>
+					<!-- / .item -->
+					
+					<section class="item">
+						<h1 class="headline2"><span>後日追加予定のもの</span></h1>
+						<p>今後スタンダードに追加予定のプラグインなどです。</p>
+						
+						<section class="inner">
+							<h1 class="headline3"><span>フローティングウィンドウ SIMPLE MODAL</span></h1>
+							<p>モーダル＆フローティングウィンドウとしての機能を備えるプラグイン。汎用性が高いです。<br>
+								<a href="http://simplemodal.plasm.it/" target="_blank">http://simplemodal.plasm.it/</a></p>
+						</section>
+						<!-- / .inner -->
+						
+						<section class="inner">
+							<h1 class="headline3"><span>レンガ式レイアウト jQuery.masonry.js</span></h1>
+							<p class="mb0">高さの違う要素をきれいに整列できるプラグイン。可変グリッドによるレスポンシブ対応もこのプラグインで実現可能です。<!--
+							-->Ajaxによる追加読み込みに対応したものを実装予定。<br>
+								<a href="http://masonry.desandro.com/index.html" target="_blank">http://masonry.desandro.com/index.html</a></p>
+						</section>
+						<!-- / .inner -->
+						
+					</section>
+					<!-- / .item -->
+				</section>
+				<!-- / .section -->
+			</div>
+			<!-- / #main -->
+			
+			
+			<aside id="side">
+				<section class="section">
+					<h1 class="headlineSide"><span>CB-STANDARD</span></h1>
+					<ul class="item">
+						<li>
+							<input type="text" value="L:\cb-standard-html5">
+						</li>
+						<li><a href="http://cb-standard-xhtml.design.cba/">CB-STANDARD for XHTML</a></li>
+						<li>CB-STANDARD for HTML5</li>
+						<li><a href="http://cb-standard-html5.design.cba/admin/">CB-STANDARD for Admin</a></li>
+						<li><a href="http://cb-standard-res.design.cba/">CB-STANDARD for Responsive</a></li>
+						<li><a href="http://cb-standard-smart.design.cba/">CB-STANDARD for Smartphone</a></li>
+						<li><a href="http://cb-standard-mobile.design.cba/">CB-STANDARD for Mobile</a></li>
+					</ul>
+				</section>
+				<!-- / .section -->
+				
+				<section class="section">
+					<h1 class="headlineSide"><span>CSS</span></h1>
+					<ul class="item">
+						<li><a href="/css/common.css" target="_blank">common.css</a></li>
+						<li><a href="/css/style.css" target="_blank">style.css</a></li>
+						<li><a href="/css/module.css" target="_blank">module.css</a></li>
+					</ul>
+				</section>
+				<!-- / .section -->
+				
+				<section class="section">
+					<h1 class="headlineSide"><span>JavaScript</span></h1>
+					<ul class="item">
+						<li><a href="/js/script.js" target="_blank">script.js</a></li>
+					</ul>
+				</section>
+				<!-- / .section -->
+				
+				<section class="section clearfix">
+					<h1 class="headlineSide"><span>QRコード自動生成</span></h1>
+					<a href="#"><img class="leftBox" alt="QRコード" src="http://chart.apis.google.com/chart?cht=qr&amp;chs=80x80&amp;choe=Shift_JIS&amp;chl=http%3A%2F%2Fbemss.jp%2Fg-kobo%2F"></a>
+					<p class="item">＠<a href="http://chart.apis.google.com/" target="_blank">Google APIs</a></p>
+				</section>
+				<!-- / .section clearfix -->
+				
+				<section class="section">
+					<h1 class="headlineSide"><span>ダミー画像自動生成</span></h1>
+					<img alt="dummyimage" src="http://cambelt.co/200x200">
+					<div class="item center">＠<a href="http://cambelt.co/" target="_blank">Cambelt</a></div>
+				</section>
+				<!-- / .section -->
+			</aside>
+			<!-- / #side -->
+		</div>
+		<!-- /#contents -->
+		
+		
+		<ul id="pageTop" class="pageTop">
+			<li><a href="#wrapper" class="hover"><img alt="ページの先頭へ" src="/img/common/btn_pagetop.gif"></a></li>
+		</ul>
+		<!-- / #pageTop -->
+		
+		
+		<footer id="footer">
+			<ul id="footerNavi">
+				<li id="fnaviIr"><a href="#">投資家の皆様へ</a></li>
+				<li id="fnaviPrivacy"><a href="#">プライバシーポリシー</a></li>
+				<li id="fnaviContact"><a href="#">お問い合わせ</a></li>
+				<li id="fnaviSitemap"><a href="#">サイトマップ</a></li>
+			</ul>
+			<!-- / #footerNavi -->
+			
+			<div id="footerInner">
+				<div id="footerList" class="clearfix">
+					<dl class="solution">
+						<dt>インテグレーション事業</dt>
+						<dd>
+							<ul>
+								<li><a href="#">システム開発</a></li>
+								<li><a href="#">ウェブ制作</a></li>
+								<li><a href="#">IRサイト</a></li>
+								<li><a href="#">採用サイト</a></li>
+								<li><a href="#">モバイルサイト制作</a></li>
+								<li><a href="#">社内制度</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<!-- / .solution -->
+					
+					<dl class="media">
+						<dt>メディア事業</dt>
+						<dd>
+							<ul class="mediaLeft">
+								<li><a href="http://allcoupon.jp/" target="_blank">クーポン</a></li>
+								<li><a href="http://hosupi.jp/" target="_blank">病院</a>・<a href="http://pharma-career.jp/" target="_blank">薬剤師</a></li>
+								<li><a href="http://juku-guide.com/" target="_blank">学習塾</a>・<a href="http://eduon.jp/" target="_blank">教育</a></li>
+								<li><a href="http://gassyuku.com/" target="_blank">合宿</a>・<a href="http://menkyodo.com/" target="_blank">合宿免許</a></li>
+								<li><a href="http://www.campuscity.jp/" target="_blank">大学生</a>・<a href="http://clam.milkcafe.net/jyuken/">大学受験</a></li>
+								<li><a href="http://www.ciftr.jp/" target="_blank">シフト管理</a></li>
+							</ul>
+							<ul class="mediaRight">
+								<li><a href="http://myarbeit.jp/" target="_blank">アルバイト</a></li>
+								<li><a href="http://www.at-internship.com/" target="_blank">インターンシップ</a></li>
+								<li><a href="http://jukunavi.com/" target="_blank">塾講師</a></li>
+								<li><a href="http://myhaken.jp/" target="_blank">人材派遣</a></li>
+								<li><a href="http://eventforce.jp/" target="_blank">セミナー・イベント</a></li>
+								<li><a href="http://venture-plus.com/" target="_blank">ベンチャー</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<!-- / .media -->
+					
+					<dl class="group">
+						<dt>グループ会社</dt>
+						<dd>
+							<ul>
+								<li><a href="http://palp.com/" target="_blank">株式会社ピーエー</a></li>
+								<li><a href="http://soratobu.jp/" target="_blank">空飛ぶ株式会社</a></li>
+								<li><a href="http://cybridgemobile.jp/" target="_blank">株式会社サイブリッジモバイル</a></li>
+								<li><a href="http://naked-tech.com/" target="_blank">株式会社ネイキッドテクノロジー</a></li>
+								<li><a href="http://cybridgeventures.jp/" target="_blank">サイブリッジベンチャーズ株式会社</a></li>
+								<li><a href="http://predge.co.jp/" target="_blank">プレッジ株式会社</a></li>
+								<li><a href="http://corp.allcoupon.jp/" target="_blank">オールクーポンジャパン株式会社</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<!-- / .group -->
+					
+					<dl class="social">
+						<dt>ソーシャルメディア</dt>
+						<dd>
+							<ul>
+								<li><a href="http://ja-jp.facebook.com/cybridge" target="_blank" rel="nofollow">サイブリッジfacebook</a></li>
+								<li><a href="http://twitter.com/cybridge" target="_blank" rel="nofollow">@cybridge(twitter)</a></li>
+								<li><a href="http://tsubasa.blog.cybridge.jp/" target="_blank">社長ブログ</a></li>
+								<li><a href="http://labs.cybridge.jp/" target="_blank">サイブリッジラボブログ</a></li>
+								<li><a href="http://cybridgefaq.camblo.jp/" target="_blank">サイブリッジへ300の質問</a></li>
+								<li><a href="http://shicata.cybridge.jp/" target="_blank">シカータくんのお部屋</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<!-- / .social -->
+				</div>
+				<!-- / #footerList .clearfix -->
+			</div>
+			<!-- / #footerInner -->
+			
+			<div id="footerBox" class="clearfix">
+				<small><a href="/" class="footerLogo"><img alt="株式会社サイブリッジ" src="/img/cybridge/logo_footer.gif"></a></small><!--
+				--><address><img alt="〒169-0074 東京都新宿区北新宿2-21-1 新宿フロントタワー4F TEL 03-6381-5900 FAX 03-6381-5933" src="/img/cybridge/address.gif"></address>
+			</div>
+		</footer>
+		<!-- /#footer -->
+	</div>
+	<!-- /#container -->
+</div>
+<!-- /#wrapper -->
+</body>
+</html>
