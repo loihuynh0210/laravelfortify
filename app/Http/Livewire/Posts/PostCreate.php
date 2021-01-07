@@ -12,20 +12,37 @@ class PostCreate extends Component
 
     public $post;
 
+    public $name;
+
     protected $rules = [
         'post.title' => 'required|min:6',
         'post.body' => 'required|min:6',
+    ];
+
+    public $listeners = [
+        'savePost' => 'savePosts',
+        'sayhello' => 'sayHellos'
     ];
 
     public function mount(){
         $this->post = new Post;
     }
 
-    public function savePost(){
+    public function sayHellos($data)
+    {
+        $this->name = $data['name'];
+        $this->emit('loadCard', ['type' => 'success', 'title' => 'Saved', 'message' => 'Saved ' . $this->name]);
+    }
+
+    public function savePosts() {
         $this->post->admin_id = 1;
         $this->post->slug = Str::slug($this->post->title);
         $this->post->save();
         $this->saveSuccess = true;
+
+        // // share data to view
+        $this->dispatchBrowserEvent('alert', ['type' => 'success', 'title' => 'Saved', 'message' => 'Saved 113']);
+        $this->emit('loadCard', ['type' => 'success', 'title' => 'Saved', 'message' => 'Saved 113']);
     }
 
     public function render()
