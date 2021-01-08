@@ -17,7 +17,7 @@
         @error('photo') <span class="error">{{ $message }}</span> @enderror
     </div> -->
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="exampleInputName">File:</label>
         @if ($photo)
             Photo Preview:
@@ -33,7 +33,7 @@
         @endif
         <input type="file" class="form-control" id="exampleInputName" wire:model="photo">
         @error('photo') <span class="text-danger">{{ $message }}</span> @enderror
-    </div>
+    </div> -->
 
     <div class="form-group">
         <label for="pwd">Phone:</label>

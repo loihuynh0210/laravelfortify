@@ -58,4 +58,9 @@ class Admin extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function todos()
+    {
+        return $this->hasMany(Todo::class);
+    }
 }

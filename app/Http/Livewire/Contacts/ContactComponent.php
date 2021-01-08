@@ -30,7 +30,7 @@ class ContactComponent extends Component
     ];
 
     private $contact_lead;
-    public $perPage = 2;
+    public $perPage = 10;
 
     protected $listeners = [
         'searchContact' => 'setSearchKeywork',
@@ -105,14 +105,14 @@ class ContactComponent extends Component
 
     public function updated($propertyName)
     {
-        $this->validateOnly($propertyName);
+        //$this->validateOnly($propertyName);
     }
 
     public function store()
     {
         $validatedData = $this->validate();
         $validatedData['preferred'] = 1;
-        $validatedData['photo'] = $this->photo->store('files', 'public');
+        //$validatedData['photo'] = $this->photo->store('files', 'public');
 
         ContactLead::create($validatedData);
 
