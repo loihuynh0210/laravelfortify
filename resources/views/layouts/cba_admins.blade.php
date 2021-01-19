@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1000">
+<meta name="robots" content="noindex,nofollow">
+<title>管理画面 | {[#SITE_TITLE#]}</title>
+<link rel="stylesheet" href="/admin/css/common.css" media="all">
+<link rel="stylesheet" href="/admin/css/admin.css" media="all">
+<link rel="stylesheet" href="/admin/css/font-awesome.min.css" media="all">
+<link rel="stylesheet" href="/admin/css/formValidator/validationEngine.jquery.css" media="all">
+<link rel="stylesheet" href="/admin/css/formValidator/validationTemplate.css" media="all">
+<link rel="stylesheet" href="/admin/css/colorbox.css" media="all">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css">
+<link rel="shortcut icon" type="image/x-icon" href="/admin/img/favicon.ico">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+<script src="//maps.google.com/maps/api/js?sensor=false"></script>
+<script src="/admin/js/formValidator/jquery.validationEngine.js"></script>
+<script src="/admin/js/formValidator/jquery.validationEngine-ja.js"></script>
+<script src="/admin/js/jquery.colorbox.js"></script>
+<script src="/admin/js/script.js"></script>
+<script src="/admin/js/admin.js"></script>
+<!--[if lt IE 9]>
+<script src="/js/html5shiv-printshiv.js"></script>
+<![endif]-->
+</head>
+<body id="pageAdminHome">
+<div id="headerBar">
+    <div id="headerBarInner" class="clearfix">
+        <p class="leftBox mr20">CB-STANDARD for Admin v1.0.0</p>
+        <dl class="leftBox clearfix">
+            <dt class="leftBox">本日のアクセス数：</dt>
+            <dd class="leftBox">25120</dd>
+        </dl>
+        <ul id="headerBarMenu" class="clearfix rightBox">
+            <li class="leftBox"><a href="http://cb-standard-xhtml.client.cybridge.jp/">XHTML版</a></li>
+            <li class="leftBox"><a href="/">HTML5版</a></li>
+            <li class="leftBox"><a href="http://cb-standard-res.client.cybridge.jp/admin/">レスポンシブ版</a></li>
+            <li class="leftBox"><a href="http://cb-standard-smart.client.cybridge.jp/">スマホ版</a></li>
+            <li class="leftBox"><a href="http://cb-standard-mobile.client.cybridge.jp/">ガラケー版</a></li>
+        </ul>
+    </div>
+</div>
+<!-- / #headerBar -->
+<noscript>
+    <p id="noScript">JavaScriptが無効です。正しくサイトを表示するためには、JavaScriptを有効にする必要があります。</p>
+</noscript>
+<div id="wrapper">
+    <div id="container">
+        <header id="header">
+            <a href="/admin/" id="logo"><img src="/img/cybridge/logo.gif" alt="CB-STANDARD"></a>
+            <hgroup>
+                <h1>CB-STANDARD 管理画面</h1>
+                <h2>ようこそ、<span>ひらりん</span>様</h2>
+            </hgroup>
+            
+            <ul id="headerMenu">
+                <li><a href="/" class="checkWeb" target="_blank"><i class="fa fa-check-circle" aria-hidden="true"></i>サイトを確認</a></li>
+                <li><a href="/admin/login.html" class="logout"><i class="fa fa-sign-in" aria-hidden="true"></i>ログアウト（ログイン画面へ）</a></li>
+            </ul>
+        </header>
+        <!-- / #header -->
+        <div id="contents" class="clearfix">
+            <div id="main">
+                <ol class="breadcrumbs">
+                    <li><a href="/admin/">管理画面ホーム</a></li>
+                    <li><a href="#">コンテンツ</a></li>
+                    <li><em>ページ名</em></li>
+                </ol>
+                <!-- / .breadcrumbs -->
+                <section class="section">
+                    <h1 class="headline"><span>CB-STANDARD for Admin</span></h1>
+                    <div class="message">
+                        <p>HTML5版に組み込まれた管理画面用のスタンダードです。<strong class="red">ブラウザはIE8から対応しています。</strong><!--
+                        -->フォームのバリデーション機能やカレンダーなどを標準で実装しているので、管理画面の作成に利用してください。</p>
+                    </div>
+                </section>
+                <!-- / .section -->
+                <section class="section">
+                    <h1 class="headline"><span>検索フォーム</span></h1>
+                    <div class="boxInner">
+                        <p class="linkList"><a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i>記事の新規追加</a></p>
+                        <form class="searchBox" action="#" method="get">
+                        <table class="sheet">
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" class="pa10">
+                                        <span class="checkbox"><input type="checkbox" value="チェックボックス1" id="check1"><label for="check1">チェックボックス1</label></span>
+                                        <span class="checkbox"><input type="checkbox" value="チェックボックス2" id="check2"><label for="check2">チェックボックス2</label></span>
+                                        <span class="checkbox"><input type="checkbox" value="チェックボックス3" id="check3"><label for="check3">チェックボックス3</label></span>
+                                        <span class="checkbox"><input type="checkbox" value="チェックボックス4" id="check4"><label for="check4">チェックボックス4</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="pa10">
+                                        <span class="checkbox"><input type="radio" value="チェックボックス1" id="radio1"><label for="radio1">チェックボックス1</label></span>
+                                        <span class="checkbox"><input type="radio" value="チェックボックス2" id="radio2"><label for="radio2">チェックボックス2</label></span>
+                                        <span class="checkbox"><input type="checkbox" value="チェックボックス3" id="check3"><label for="check3">チェックボックス3</label></span>
+                                        <span class="checkbox"><input type="checkbox" value="チェックボックス4" id="check4"><label for="check4">チェックボックス4</label></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>セレクトボックス</th>
+                                    <td>
+                                        <select>
+                                            <option value="">▼セレクトボックス</option>
+                                            <option value="セレクトボックス1">セレクトボックス1</option>
+                                            <option value="セレクトボックス2">セレクトボックス2</option>
+                                            <option value="セレクトボックス3">セレクトボックス3</option>
+                                            <option value="セレクトボックス4">セレクトボックス4</option>
+                                        </select>
+                                    </td>
+                                    <th>掲載状態</th>
+                                    <td>
+                                        <select>
+                                            <option value="">▼ステータス</option>
+                                            <option value="下書保存">下書保存</option>
+                                            <option value="掲載中" selected>掲載中</option>
+                                            <option value="削除">削除</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>キーワード</th>
+                                    <td colspan="3">
+                                        <input name="key_word" type="text" id="key_word_id">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="4" class="pa10">
+                                        <button type="submit" class="button blue2 auto mb0">検索する</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <!-- / .searchBox -->
+                    </div>
+                </section>
+                <!-- / .section -->
+                <section class="section">
+                    <h1 class="headline"><span>一覧表示</span></h1>
+                    <div class="boxInner">
+                    <dl class="searchUtil">
+                        <dt><strong>4</strong>件中</dt>
+                        <dd>1件 - 4件表示</dd>
+                    </dl>
+                    <form class="searchBox" action="#" method="get">
+                    <table class="sheet">
+                        <thead>
+                            <tr>
+                                <th style="width:100px;"><span>掲載状態</span></th>
+                                <th><span>タイトル</span></th>
+                                <th><span>作成日時</span></th>
+                                <th><span>操作</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="trWhite">
+                                <td class="status">
+                                    <span class="public">掲載中</span>
+                                </td>
+                                <td class="title">
+                                    <h2>株式会社サイブリッジ運営事務局</h2>
+                                    <p class="latestTime">最終更新：2013/01/15 更新者：ひらりん</p>
+                                </td>
+                                <td class="date">2013/01/06 22:00</td>
+                                <td class="operate">
+                                    <table>
+                                        <tr>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-search" aria-hidden="true"></i>プレビュー</a>
+                                                <a href="#" class="block"><i class="fa fa-user" aria-hidden="true"></i>ユーザー</a>
+                                                <a href="#" class="block"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>編集する</a>
+                                            </td>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-files-o" aria-hidden="true"></i>複製する</a>
+                                                <a href="#" class="block"><i class="fa fa-check" aria-hidden="true"></i>アクセス解析</a>
+                                                <a href="#" class="confirm block" data-alert="本当に削除してもよろしいですか？"><i class="fa fa-times" aria-hidden="true"></i>削除する</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- / .trWhite -->
+                            <tr class="trGray">
+                                <td class="status">
+                                    <span class="unsupported">未対応</span>
+                                </td>
+                                <td class="title" >
+                                    <h2>株式会社サイブリッジ運営事務局</h2>
+                                    <p class="latestTime">最終更新：2013/01/15 更新者：ひらりん</p>
+                                </td>
+                                <td class="date">2013/01/06 22:00</td>
+                                <td class="operate">
+                                    <table>
+                                        <tr>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-search" aria-hidden="true"></i>プレビュー</a>
+                                                <a href="#" class="block"><i class="fa fa-user" aria-hidden="true"></i>ユーザー</a>
+                                                <a href="#" class="block"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>編集する</a>
+                                            </td>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-files-o" aria-hidden="true"></i>複製する</a>
+                                                <a href="#" class="block"><i class="fa fa-check" aria-hidden="true"></i>アクセス解析</a>
+                                                <a href="#" class="confirm block" data-alert="本当に削除してもよろしいですか？"><i class="fa fa-times" aria-hidden="true"></i>削除する</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- / .trGray -->
+                            <tr class="trWhite">
+                                <td class="status">
+                                    <span class="check">確認中</span>
+                                </td>
+                                <td class="title">
+                                    <h2>株式会社サイブリッジ運営事務局</h2>
+                                    <p class="latestTime">最終更新：2013/01/15 更新者：ひらりん</p>
+                                </td>
+                                <td class="date">2013/01/06 22:00</td>
+                                <td class="operate">
+                                    <table>
+                                        <tr>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-search" aria-hidden="true"></i>プレビュー</a>
+                                                <a href="#" class="block"><i class="fa fa-user" aria-hidden="true"></i>ユーザー</a>
+                                                <a href="#" class="block"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>編集する</a>
+                                            </td>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-files-o" aria-hidden="true"></i>複製する</a>
+                                                <a href="#" class="block"><i class="fa fa-check" aria-hidden="true"></i>アクセス解析</a>
+                                                <a href="#" class="confirm block" data-alert="本当に削除してもよろしいですか？"><i class="fa fa-times" aria-hidden="true"></i>削除する</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- / .trWhite -->
+                            <tr class="trGray">
+                                <td class="status">
+                                    <span class="rough">下書き</span>
+                                </td>
+                                <td class="title" >
+                                    <h2>株式会社サイブリッジ運営事務局</h2>
+                                    <p class="latestTime">最終更新：2013/01/15 更新者：ひらりん</p>
+                                </td>
+                                <td class="date">2013/01/06 22:00</td>
+                                <td class="operate">
+                                    <table>
+                                        <tr>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-search" aria-hidden="true"></i>プレビュー</a>
+                                                <a href="#" class="block"><i class="fa fa-user" aria-hidden="true"></i>ユーザー</a>
+                                                <a href="#" class="block"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>編集する</a>
+                                            </td>
+                                            <td class="pa5 ba0">
+                                                <a href="#" class="block"><i class="fa fa-files-o" aria-hidden="true"></i>複製する</a>
+                                                <a href="#" class="block"><i class="fa fa-check" aria-hidden="true"></i>アクセス解析</a>
+                                                <a href="#" class="confirm block" data-alert="本当に削除してもよろしいですか？"><i class="fa fa-times" aria-hidden="true"></i>削除する</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- / .trGray -->
+                        </tbody>
+                    </table>
+                    </form>
+                    </div>
+                    <!-- / .sheet -->
+                    <ol class="pager">
+                            <li><a class="fixRadius" href="#">前の10件</a></li>
+                            <li><strong>1</strong></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a class="fixRadius" href="#">次の10件</a></li>
+                    </ol>
+                    <!-- / .pager -->
+                    <p class="alert">検索結果は0件です</p>
+                </section>
+                <!-- / .section -->
+                <section class="section">
+                    <h1 class="headline headlineFix"><span>フォームのリアルタイムバリデート formValidator</span></h1>
+                    <ul class="error">
+                        <li><i class="fa fa-exclamation-circle" aria-hidden="true"></i>メールアドレスが記入されていません</li>
+                        <li><i class="fa fa-exclamation-circle" aria-hidden="true"></i>氏名が入力されていません</li>
+                    </ul>
+                    <form action="#" method="post">
+                        <table class="sheet mb20">
+                            <tbody>
+                                <tr class="titleTxt">
+                                    <th style="width:150px;">氏名<span class="red">[必須]</span></th>
+                                    <td>
+                                        <input name="userName" id="userName" type="text" style="width:280px;" class="validate[required]">
+                                        <p class="example">ひらりん</p>
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>メールアドレス<span class="red">[必須]</span></th>
+                                    <td>
+                                        <input name="userEmail" id="userEmail" type="text" style="width:280px;" class="validate[required,custom[email]]">
+                                        <p class="example">keiko.hirayama@cybridge.jp</p>
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>パスワード<span class="red">[必須]</span></th>
+                                    <td>
+                                        <p class="notice">半角英数字とハイフン、アンダーバーのみで入力してください。</p>
+                                        <input name="userPassword" id="userPassword" type="password" style="width:150px;" class="validate[required,custom[onlyLetter2]]">
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>テキストエリア</th>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>数値入力<span class="red">[必須]</span></th>
+                                    <td>
+                                        <p class="notice">数値を半角数字で記入してください。</p>
+                                        <input name="userNumber" id="userNumber" value="1" type="text" style="width:150px;" class="validate[required,custom[onlyNumber]]">
+                                        <p class="example">100</p>
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th style="width:150px;">住所</th>
+                                    <td>
+                                        <input name="userAdd" id="userAdd" type="text" style="width:280px;">
+                                        <p class="example">東京都新宿区北新宿2-21-1</p>
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>Google Maps</th>
+                                    <td>
+                                        <input type="button" class="input inline mr10" value="住所から入力" id="showGmap">
+                                        <label>緯度</label><input name="mapLat" type="text" style="width:150px;" id="mapLat">
+                                        <label>経度</label><input name="mapLng" type="text" style="width:150px;" id="mapLng">
+                                        <div id="map" style="width:100%;height:300px;margin-top:10px;"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h2 class="headline2"><span>写真</span></h2>
+                        <table class="sheet mb20">
+                            <tr>
+                                <th style="width:150px;">画像</th>
+                                <td>
+                                    <figure>
+                                        <div class="imgThumb mb10">
+                                            <a href="#"><img alt="" src="/img/admin/img_thumb.jpg"></a>
+                                        </div>
+                                        <div class="imgOperate">
+                                            <a href="#" class="btnLink">画像をアップロード</a>
+                                            <a href="#" class="confirm ml10" data-alert="本当に削除してもよろしいですか？"><i class="fa fa-times" aria-hidden="true"></i>削除する</a>
+                                            <figcaption class="notice">縦000px × 横000pxに自動リサイズされます。</figcaption>
+                                        </div>
+                                    </figure>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2 class="headline2"><span>カレンダー</span></h2>
+                        <table class="sheet mb20">
+                            <tr>
+                                <th style="width:150px;">カレンダー</th>
+                                <td><input type="text" class="datepicker" style="width:150px;"></td>
+                            </tr>
+                        </table>
+                        <h2 class="headline2"><span>メールマガジン</span></h2>
+                        <table class="sheet mb20">
+                            <tbody>
+                                <tr class="titleTxt">
+                                <th style="width:150px;">タイトル<span class="red">[必須]</span></th>
+                                    <td>
+                                        <p class="notice">メールのタイトルです。</p>
+                                        <input name="userMagTitle" id="userMagTitle" type="text" class="validate[required]">
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>本文</th>
+                                    <td>
+                                        <textarea name="userMagContents" id="userMagContents" style="height:500px"></textarea>
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>配信日<span class="red">[必須]</span></th>
+                                    <td>
+                                        <p class="notice">過去に設定すると、即時送信されます。（送信開始までには最長1時間掛かります。）</p>
+                                        <input name="userMagDate" id="userMagDate" type="text" style="width:150px" value="2013-01-21" class="datepicker validate[required,custom[date]]">
+                                    </td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>配信時間<span class="red">[必須]</span></th>
+                                    <td><input name="userMagTime" id="userMagTime" type="text" style="width:150px" value="20:00" class="validate[required,custom[time]]"></td>
+                                </tr>
+                                <tr class="titleTxt">
+                                    <th>状態</th>
+                                    <td>
+                                        <p class="notice">送信を行う場合には、配信待ちに変更してください。</p>
+                                        <select style="width:170px" name="userMagStatus" id="userMagStatus">
+                                            <option value="下書き">下書き</option>
+                                            <option value="配信待ち">配信待ち</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="width:310px;" class="clearfix auto">
+                            <button type="submit" class="leftBox button gray2 mr10 mb0">戻る</button>
+                            <button type="submit" class="rigthBox button blue2 mb0">確認画面へ</button>
+                        </div>
+                    </form>
+                </section>
+                <!-- / .section -->
+                <p id="pageTop" class="pageTop"><a href="#wrapper">ページの先頭へ</a></p>
+            <!-- / #content -->
+            </div>
+            <!-- / #main -->
+            <nav id="side">
+                <ul id="navi">
+                    <li>
+                        <span class="parent">メニュー1</span>
+                        <ul class="pull">
+                            <li><a href="#">メニュー1-A</a></li>
+                            <li><a href="#">メニュー1-B</a></li>
+                            <li><a href="#">メニュー1-C</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="parent">メニュー2</span>
+                        <ul class="pull">
+                            <li><a href="#">メニュー2-A</a></li>
+                            <li><a href="#">メニュー2-B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="parent">メニュー3</span>
+                        <ul class="pull">
+                            <li><a href="#">メニュー3-A</a></li>
+                            <li><a href="#">メニュー3-B</a></li>
+                            <li><a href="#">メニュー3-C</a></li>
+                            <li><a href="#">メニュー3-D</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="parent">メニュー4</span>
+                        <ul class="pull">
+                            <li><a href="#">メニュー4-A</a></li>
+                            <li><a href="#">メニュー4-B</a></li>
+                            <li><a href="#">メニュー4-C</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="parent">各種設定</span>
+                        <ul class="pull">
+                            <li><a href="#">設定1</a></li>
+                            <li><a href="#">設定2</a></li>
+                            <li><a href="#">設定3</a></li>
+                            <li><a href="#">設定4</a></li>
+                            <li><a href="#">設定5</a></li>
+                            <li><a href="#">設定6</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="parent">ページチェック</span>
+                        <ul class="pull">
+                            <li><a href="#" target="_blank">サイトを確認</a></li>
+                            <li><a href="#" target="_blank" class="bb0">テストサイトを確認</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- / #navi -->
+            </nav>
+            <!-- / #side -->
+        </div>
+        <!-- / #contents -->
+        <div id="footer">
+            <small><a href="http://www.cybridge.jp/" target="_blank">COPYRIGHT &copy; CYBRiDGE CORPORATION. ALL RIGHTS RESERVED.</a></small>
+        </div>
+    </div>
+    <!-- / #container -->
+</div>
+<!-- / #wrapper -->
+</body>
+</html>

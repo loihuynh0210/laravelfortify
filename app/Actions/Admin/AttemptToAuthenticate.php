@@ -92,7 +92,7 @@ class AttemptToAuthenticate
         $this->limiter->increment($request);
 
         throw ValidationException::withMessages([
-            Fortify::username() => [trans('auth.failed')],
+            Fortify::username() => [trans('メールアドレスまたはパスワードが違います。')],
         ]);
     }
 }
