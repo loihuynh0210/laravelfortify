@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('admin/alpinejs', function () {
+    return view('admin.alpinejs.default');
+});
+Route::get('admin/alpinejs/index', function () {
+    return view('admin.alpinejs.index');
+});
 
 Route::get('admin/user', function () {
     return view('admin.users.default');
@@ -34,7 +40,6 @@ Route::get('admin/contact', \App\Http\Livewire\Contact\ContactForm::class);
 Route::view('admin/contacts','admin.contacts.default');
 
 
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -45,7 +50,6 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware('auth:admin')->group(function () {
         Route::get('dashboard', [AdminDashboardController::class, 'index']);
-
     });
 });
 

@@ -10,6 +10,13 @@ class UserPagination extends Component
 {
     use WithPagination;
 
+    public $isVisible = false;
+
+    public function setVisibleTrue()
+    {
+        $this->isVisible = false;
+    }
+
     public function render()
     {
         return view('livewire.users.user-pagination', [

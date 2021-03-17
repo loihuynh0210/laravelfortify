@@ -53,8 +53,9 @@
      }
     </style>
 
-    <script type ="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js"> </script>
-    <script type ="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine-ie11.min.js"> </script>
+    <script type ="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer> </script>
+    <script type ="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine-ie11.min.js" defer> </script>
+    <script src="https://cdn.jsdelivr.net/gh/mattkingshott/iodine@3/dist/iodine.min.js" defer></script>
 
 </head>
 <body>
